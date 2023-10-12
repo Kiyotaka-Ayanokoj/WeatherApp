@@ -1,0 +1,331 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  background: linear-gradient(
+    45deg,
+    white, 
+    rgb(89, 196, 245)
+  );
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  height: 100%;
+  min-height: 90vh;
+  min-width: 100%;
+  margin-bottom: 100px;
+  position: relative;
+}
+
+.topData {
+  margin-top: 80px;
+  padding: 60px 0px;
+  display: flex;
+  justify-content: space-around;
+  place-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.data {
+  width: 100%;
+  border-radius: 10px;
+  display: flex;
+  height: auto;
+  flex-direction: column;
+  position: relative;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: space-evenly;
+  background: white;
+}
+
+.card-title {
+  margin-bottom: 10px;
+  display: inline;
+}
+
+.sTerm {
+  position: relative;
+  bottom: 10px;
+}
+
+.moreDataContainer {
+  background: white;
+  width: 100%;
+  padding: 40px 0;
+  border-radius: 20px 20px 0 0;
+  height: 100%;
+  display: flex;
+  gap: 25px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+button {
+  gap: 100px
+}
+
+.historyData {
+  width: 100%;
+  background: none;
+  padding: 10px;
+  height: 100%;
+}
+
+.card-info {
+  font-size: 17px;
+  font-weight: normal;
+  border: none;
+  color: black;
+  background: none;
+}
+
+.titleButton {
+  font-size: 23px;
+  font-weight: normal;
+  border: none;
+  width: 100%;
+  text-align: left;
+  color: black;
+  background: none;
+  text-align: center;
+  cursor: pointer;
+}
+
+.titleButton:not(.titleButton:first-child) {
+  margin-top: 40px;
+}
+
+.titleButton:hover {
+  text-decoration: underline;
+}
+
+.moreData {
+  background: none;
+  flex-direction: column;
+  position: relative;
+  width: 100% !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.moreData span {
+  color: black;
+  padding: 10px;
+  border-bottom: 1px solid black;
+}
+
+.openMD {
+  animation: opened .5s ease forwards;
+}
+
+@keyframes opened {
+  from {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+  to {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
+.closedMD {
+  animation: closed .5s ease forwards;
+}
+
+@keyframes closed {
+  from {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  to {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+}
+
+.navBar {
+  background: url("src/assets/banner.jpg");
+  background-position: left;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  padding: 2.5rem 1.5rem;
+  background-origin: border-box;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+@keyframes scaleUp {
+  from {
+    transform: scaleY(0.8);
+    transform-origin: top;
+  }
+  to {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+}
+
+@keyframes scaleDown {
+  from {
+    transform: scaleY(1);
+    transform-origin: top;
+  }
+  to {
+    transform: scaleY(0.8);
+    transform-origin: top;
+  }
+}
+
+.header-title {
+  display: block;
+  width: 100%;
+  color: white;
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: 2px 1px 5px;
+}
+
+.img-footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer-logo {
+  height: 50px;
+  display: block;
+  width: 230px;
+}
+
+.footer-container-logo {
+  height: 100%;
+  width: 100%;
+  padding: 30px 0; 
+  display: flex;
+  justify-content: center;
+}
+
+@media (min-height: 850px) {
+  .navBar {
+    padding: 4rem 3rem;
+  }
+  .header-title {
+    font-size: 30px;
+  }
+  .container {
+    margin-top: 150px;
+  }
+}
+
+.historyChart {
+  background: none;
+  flex-direction: column;
+  position: relative;
+  transform: scale(1);
+}
+
+.forecastData {
+  flex-direction: column;
+  position: relative;
+  transform: scale(1);
+}
+
+
+
+/* Pc style */
+
+@media (min-height: 1200px) {
+  .topData {
+    padding: 100px 0px;
+    display: flex;
+    justify-content: space-around;
+    place-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 0;
+  }
+
+  .data {
+    padding: 170px;
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    font-size: 35px;
+  }
+
+  .card-title {
+    font-size: 30px;
+  }
+
+  .card-number {
+    font-size: 30px;
+  }
+
+  .card-info {
+    font-size: 25px;
+  }
+
+  .titleButton {
+    font-size: 30px;
+    border-bottom: 2px solid black;
+    margin-bottom: 5px;
+    padding: 20px;
+  }
+
+  .moreDataContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background: none;
+  }
+
+  .moreDataContainer div {
+    width: 30%;
+  }
+
+  .moreData {
+    display: block;
+    height: 65vh;
+    width: 100%;
+  }
+
+  .footer-logo {
+    height: 100px;
+    display: block;
+    width: 320px;
+  }
+  
+  .footer-container-logo {
+    height: 100%;
+    width: 100%;
+    padding: 30px 0; 
+    display: flex;
+    justify-content: center;
+  }
+
+  .navBar {
+    background-size: 100% 180%;
+  }
+}
